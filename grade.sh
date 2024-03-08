@@ -8,9 +8,7 @@ mkdir grading-area
 git clone $1 student-submission
 echo 'Finished cloning'
 
-filename=$(find . -name ListExamples.java)
-
-if [[ -f ./student-submission/$filename ]]
+if [[ -f ./student-submission/ListExamples.java ]]
 then
     echo "File found! Running Tests."
 else
