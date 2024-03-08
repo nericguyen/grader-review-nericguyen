@@ -18,4 +18,13 @@ public class TestListExamples {
     List<String> expected = Arrays.asList("a", "a", "b", "c", "d");
     assertEquals(expected, merged);
   }
+
+  @Test
+  public void testListExamplesFilter() {
+    List<String> twoMoons = Arrays.asList("a", "b", "c", "moon", "moon");
+    List<String> expected = Arrays.asList("moon", "moon");
+    IsMoon sc = new IsMoon();
+    List<String> filtered = ListExamples.filter(twoMoons,sc);
+    assertEquals(expected, filtered);
+  }
 }
